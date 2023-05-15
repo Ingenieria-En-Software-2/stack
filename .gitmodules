@@ -1,0 +1,9 @@
+[submodule "Frontend"]
+	path = Frontend
+	url = git@github.com:Ingenieria-En-Software-2/Frontend.git
+[submodule "Backend"]
+	path = Backend
+	url = git@github.com:Ingenieria-En-Software-2/Backend.git
+[submodule "DB"]
+	path = DB
+	url = git@github.com:Ingenieria-En-Software-2/DB.git
