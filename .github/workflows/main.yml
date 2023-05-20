@@ -1,9 +1,12 @@
 name: Stack Deployment
 
 on:
-  [push, pull_request]:
+  push:
     branches:
       - feat_deployment
+  pull_request:
+    branches:
+      -feat_deployment
 
 jobs:
   run-container:
