@@ -21,7 +21,7 @@ jobs:
           git submodule update --remote --recursive
 
       - name: List Backend directory contents
-        run: ls -al /home/runner/work/stack/stack/Backend/
+        run: ls -al /home/runner/work/stack/Backend/
 
       - name: Docker Compose
         run: docker-compose up --build -d
