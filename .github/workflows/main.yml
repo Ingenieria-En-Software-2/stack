@@ -3,10 +3,10 @@ name: Stack Run
 on:
   push:
     branches:
-      - feat_deployment
+      - main
   pull_request:
     branches:
-      - feat_deployment
+      - main
 
 jobs:
   run-container:
