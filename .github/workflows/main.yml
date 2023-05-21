@@ -19,9 +19,7 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Git SubModule Update
-        run: |
-          git pull --recurse-submodules
-          git submodule update --remote --recursive
+        run: git submodule update --remote --recursive
 
       - name: Docker Compose
         run: |
