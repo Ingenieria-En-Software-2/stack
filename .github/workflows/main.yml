@@ -6,7 +6,7 @@ on:
       - feat_deployment
   pull_request:
     branches:
-      -feat_deployment
+      - feat_deployment
 
 jobs:
   run-container:
