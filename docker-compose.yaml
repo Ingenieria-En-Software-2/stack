@@ -1,50 +1,40 @@
-version: "1.0"
+version: "3"
+
 services:
+
   postgres:
-    container_name: postgres
-    image: "postgres:15"
-    restart: always
+    extends:
+      file: ./Backend/docker-compose.yaml
+      service: postgres
     networks:
       project-network:
         ipv4_address: 192.168.41.4
-    ports:
-      - "5432:5432"
-    volumes:
-      - ./postgres/data:/var/lib/postgresql/data
-      - ./postgres/conf:/etc/postgresql
     environment:
-      POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: "postgres"
-      POSTGRES_DB: "postgres"
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
   
   backend:
-    container_name: backend
-    build:
-      context: ./Backend
-      network: host
-    restart: always
+    extends:
+      file: ./Backend/docker-compose.yaml
+      service: backend
     networks:
       project-network:
         ipv4_address: 192.168.41.2
-    ports:
-      - "9010:9010"
     depends_on:
       - postgres
   
   frontend:
-    container_name: frontend
-    build: 
-      context: ./Frontend
-    restart: always
+    extends:
+      file: ./Frontend/docker-compose.yaml
+      service: frontend
     networks:
       project-network:
         ipv4_address: 192.168.41.3
-    ports:
-      - "4200:4200"
 
 networks:
   project-network:
     ipam:
       driver: default
       config:
-        - subnet: 192.168.41.0/24   
+        - subnet: 192.168.41.0/24
