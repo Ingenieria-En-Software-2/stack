@@ -2,8 +2,8 @@
 
 Este repositorio contiene el stack de tecnologías para la plataforma Caribbean Wallet, una aplicación de billetera móvil basada en el dominio de e-Banking.
 
-# Comenzando :rocket:
-Las instrucciones a continuación te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local con fines de desarrollo y prueba.
+## Comenzando :rocket:
+Las instrucciones a continuación te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para fines de desarrollo y prueba.
 
 ## Requisitos previos
 
@@ -36,7 +36,7 @@ SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://<TU_USUARIO_POSTGRES>:<TU_CONTRAS
 
 Asegúrate de reemplazar `<usuario>`, `<contraseña>`, `<nombre_bd>`, `<TU_USUARIO_POSTGRES>`, `<TU_CONTRASEÑA_POSTGRES>`, `<HOST_POSTGRES>` y `<NOMBRE_BD_POSTGRES>` con los valores correspondientes.
 
-## Ejecución:
+## Ejecución
 
 1. Ejecuta el siguiente comando para iniciar los servicios:
 ```
