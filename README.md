@@ -15,26 +15,28 @@ Las instrucciones a continuación te permitirán obtener una copia del proyecto 
 ```
 git clone git@github.com:Ingenieria-En-Software-2/stack.git
 ```
+
+2. Ve al directorio del repositorio:
+```
+cd stack
+```
+
 3. Inicializa y actualiza los submódulos:
 ```
 git submodule update --init --recursive
 ```
 
-3. Ve al directorio del repositorio:
-```
-cd stack
-```
-
-3. Crea un archivo `.env` en el directorio raíz del repositorio y configura las siguientes variables de entorno:
+4. Crea un archivo `.env` en el directorio raíz del repositorio y configura las siguientes variables de entorno:
 
 ```dotenv
 POSTGRES_USER=<usuario>
 POSTGRES_PASSWORD=<contraseña>
 POSTGRES_DB=<nombre_bd>
-SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://<TU_USUARIO_POSTGRES>:<TU_CONTRASEÑA_POSTGRES>@<HOST_POSTGRES>:5432/<NOMBRE_BD_POSTGRES>'
+SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://<TU_USUARIO_POSTGRES>:<TU_CONTRASEÑA_POSTGRES>@192.168.41.4:5432/<NOMBRE_BD_POSTGRES>'
+VITE_API_URL=http://192.168.41.2:9010/api
 ```
 
-Asegúrate de reemplazar `<usuario>`, `<contraseña>`, `<nombre_bd>`, `<TU_USUARIO_POSTGRES>`, `<TU_CONTRASEÑA_POSTGRES>`, `<HOST_POSTGRES>` y `<NOMBRE_BD_POSTGRES>` con los valores correspondientes.
+Asegúrate de reemplazar `<usuario>`, `<contraseña>`, `<nombre_bd>`, `<TU_USUARIO_POSTGRES>`, `<TU_CONTRASEÑA_POSTGRES>` y `<NOMBRE_BD_POSTGRES>` con los valores correspondientes.
 
 ## Ejecución
 
@@ -43,12 +45,12 @@ Asegúrate de reemplazar `<usuario>`, `<contraseña>`, `<nombre_bd>`, `<TU_USUAR
 docker-compose up --build -d
 ```
 
-Esto construirá y ejecutará los contenedores Docker para el frontend, el backend y PostgreSQL. Los servicios frontend y backend se iniciarán en los puertos 9010, mientras que el servicio de PostgreSQL se iniciará en el puerto 5432.
+Esto construirá y ejecutará los contenedores Docker para el frontend, el backend y PostgreSQL. Los servicios frontend y backend se iniciarán en los puertos 4173 y 9010 respectivamente, mientras que el servicio de PostgreSQL se iniciará en el puerto 5432.
 
 Una vez que los contenedores se hayan iniciado correctamente, podrás acceder a la aplicación Caribbean Wallet en tu navegador web:
 
-- Frontend: http://localhost:9010
-- Backend: http://localhost:9010/api
+- Frontend: http://192.168.41.3:4173/
+- Backend: http://192.168.41.2:9010/api
 
 ## Construido con
 
