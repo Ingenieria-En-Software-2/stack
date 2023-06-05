@@ -1,68 +1,67 @@
 # Caribbean Wallet Stack
 
-Este repositorio contiene el stack de tecnologías para la plataforma Caribbean Wallet, una aplicación de billetera móvil basada en el dominio de e-Banking.
+This repository contains the technology stack for the Caribbean Wallet platform, a mobile wallet application based on the e-Banking domain.
 
-## Comenzando :rocket:
-Las instrucciones a continuación te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para fines de desarrollo y prueba.
+## Getting started :rocket:
+The instructions below will allow you to get a working copy of the project on your local machine for development and testing purposes.
 
-## Requisitos previos
+## Prerequisites
 
-- Docker: Asegúrate de tener Docker instalado en tu máquina. Puedes descargarlo e instalarlo desde [aquí](https://www.docker.com/get-started).
+- Docker: Make sure you have Docker installed on your machine. You can download and install it from [here](https://www.docker.com/get-started).
 
-## Instalación y configuración :coffee:
+## Installation and configuration :coffee:
 
-1. Clona este repositorio en tu máquina local:
+1. Clone this repository on your local machine:
 ```
 git clone git@github.com:Ingenieria-En-Software-2/stack.git
 ```
 
-2. Ve al directorio del repositorio:
+2. Go to the repository directory:
 ```
 cd stack
 ```
 
-3. Inicializa y actualiza los submódulos:
+3. Initialize and update the submodules:
 ```
 git submodule update --init --recursive
 ```
 
-4. Crea un archivo `.env` en el directorio raíz del repositorio y configura las siguientes variables de entorno:
+4. Create a `.env` file in the repository root directory and set the following environment variables:
 
 ```dotenv
-POSTGRES_USER=<usuario>
-POSTGRES_PASSWORD=<contraseña>
-POSTGRES_DB=<nombre_bd>
-SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://<TU_USUARIO_POSTGRES>:<TU_CONTRASEÑA_POSTGRES>@192.168.41.4:5432/<NOMBRE_BD_POSTGRES>'
+POSTGRES_USER=<user>
+POSTGRES_PASSWORD=<password>
+POSTGRES_DB=<bd_name>
+SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://<YOUR_USER_POSTGRES>:<YOUR_POSTGRES_PASSWORD>@192.168.41.4:5432/<POSTGRES_DB_NAME>'
 VITE_API_URL=http://192.168.41.2:9010/api
 ```
 
-Asegúrate de reemplazar `<usuario>`, `<contraseña>`, `<nombre_bd>`, `<TU_USUARIO_POSTGRES>`, `<TU_CONTRASEÑA_POSTGRES>` y `<NOMBRE_BD_POSTGRES>` con los valores correspondientes.
+Be sure to replace `<user>`, `<password>`, `<bd_name>`, `<YOUR_USER_POSTGRES>`, `<YOUR_POSTGRES_PASSWORD>` and `<_BD_POSTGRES_BDNAME>` with the corresponding values.
 
-## Ejecución
+## Execution
 
-1. Ejecuta el siguiente comando para iniciar los servicios:
+1. Run the following command to start the services:
 ```
 docker-compose up --build -d
 ```
 
-Esto construirá y ejecutará los contenedores Docker para el frontend, el backend y PostgreSQL. Los servicios frontend y backend se iniciarán en los puertos 4173 y 9010 respectivamente, mientras que el servicio de PostgreSQL se iniciará en el puerto 5432.
+This will build and run the Docker containers for the frontend, backend and PostgreSQL. The frontend and backend services will start on ports 4173 and 9010 respectively, while the PostgreSQL service will start on port 5432.
 
-Una vez que los contenedores se hayan iniciado correctamente, podrás acceder a la aplicación Caribbean Wallet en tu navegador web:
+Once the containers are successfully started, you will be able to access the Caribbean Wallet application in your web browser:
 
 - Frontend: http://192.168.41.3:4173/
-- Backend: http://192.168.41.2:9010/api
+- Backend: http://192.168.41.2:9010/
 
-## Construido con
+## Built with
 
-Este proyecto ha sido construido utilizando las siguientes tecnologías:
+This project has been built using the following technologies:
 
-- [Flask](https://flask.palletsprojects.com/) - Un microframework de Python para construir aplicaciones web.
-- [Sqlalchemy](https://www.sqlalchemy.org/) - Una biblioteca de mapeo objeto-relacional (ORM) para Python.
-- [PostgreSQL](https://www.postgresql.org/) - Un sistema de gestión de bases de datos relacional de código abierto.
-- [React](https://reactjs.org/) - Una biblioteca de JavaScript para construir interfaces de usuario.
-- [Tailwind CSS](https://tailwindcss.com/) - Un framework de CSS de utilidad de bajo nivel.
-- [Selenium](https://www.selenium.dev/) - Una herramienta para pruebas automatizadas de la interfaz de usuario.
+- [Flask](https://flask.palletsprojects.com/) - A Python microframework for building web applications.
+- Sqlalchemy](https://www.sqlalchemy.org/) - An object-relational mapping (ORM) library for Python.
+- PostgreSQL](https://www.postgresql.org/) - An open source relational database management system.
+- React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- Tailwind CSS](https://tailwindcss.com/) - A low-level utility CSS framework.
+- [Selenium](https://www.selenium.dev/) - A tool for automated user interface testing.
 
-## Licencia
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para obtener más detalles.
-
+## License
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
