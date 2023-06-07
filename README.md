@@ -57,10 +57,10 @@ Once the containers are successfully started, you will be able to access the Car
 This project has been built using the following technologies:
 
 - [Flask](https://flask.palletsprojects.com/) - A Python microframework for building web applications.
-- Sqlalchemy](https://www.sqlalchemy.org/) - An object-relational mapping (ORM) library for Python.
-- PostgreSQL](https://www.postgresql.org/) - An open source relational database management system.
-- React](https://reactjs.org/) - A JavaScript library for building user interfaces.
-- Tailwind CSS](https://tailwindcss.com/) - A low-level utility CSS framework.
+- [Sqlalchemy](https://www.sqlalchemy.org/) - An object-relational mapping (ORM) library for Python.
+- [PostgreSQL](https://www.postgresql.org/) - An open source relational database management system.
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [Tailwind CSS](https://tailwindcss.com/) - A low-level utility CSS framework.
 - [Selenium](https://www.selenium.dev/) - A tool for automated user interface testing.
 
 ## License
